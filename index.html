@@ -1,0 +1,134 @@
+<!-- tell the browser this is an HTML5 file -->
+<!DOCTYPE html>
+
+<!-- all the HTML must be inside this root html tag -->
+<html lang="en">
+
+  <!-- give the web browser a bunch of other information about this webpage, most of it not displayed to the user -->
+  <head>
+
+    <!-- tell the browser how to display text -->
+    <meta charset="utf-8">
+    
+    <!-- give search engines some background info on this page -->
+    <meta name="description" content="Scrollama + Bootstrap Boilerplate - sample webpage to remix and build on for learners">
+    <meta name="keywords" content="digital storytelling, scrollytelling, learning, examples">
+    <meta name="author" content="Rahul Bhargava, Data Culture Group, Northeastern University">
+
+    <!-- tell the browser to render differently on mobile devices than in browsers on desktop machines -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- text that shows up in the browser tab -->
+    <title>Scrollama + Boostrap Boilerplate</title>
+
+    <!-- INCLUDE CSS FILES -->
+    <!-- pull in the bootstrap CSS files from the 3rd party CDN they are hosted on -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- pull in our own CSS rules -->
+    <link rel="stylesheet" href="project.css" type="text/css" charset="utf-8" />
+
+    <!-- INCLUDE JS FILES -->
+    <!-- use d3.js for easy DOM manipluation -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- pull in the Scrollama javscript package from the CDN hosting them -->
+    <script src="https://unpkg.com/scrollama"></script>
+    <!-- pull in scripts we wrote for this example -->
+    <script src="project.js"></script>
+    
+  </head>
+
+  <!-- the body for the content the user is shown within a browser window -->
+  <body>
+
+    <!-- the header has a title and indication to the user that they should scroll -->
+    <header>
+      <div class="container"> <!-- tell bootstrap we're going to use a grid -->
+        <div class="row"> <!-- a horizontal set of content -->
+          <div class="col-lg-6 offset-lg-3">  <!-- half-width & centered on desktop/tablet, full width on mobile --> 
+      			<h1>Scrollama + Boostrap Boilerplate</h1>
+      			<p>
+              This is a small example of how to create <i>scrollytelling</i> webpage with 
+              <a href="https://github.com/russellsamora/scrollama">scrollama.js</a> (for interactions) 
+              with <a href="https://getbootstrap.com">boostrap</a> (for styling and gridding).
+      			</p>
+            <p class="small">
+              (scroll for more)
+            </p>
+            <!-- glitch hosts "assets" like images on a CDN so they can be served up more efficiently... that means we get wacky URLs for them -->
+            <img src="https://cdn.glitch.global/60a947a3-a0d4-473b-a51a-ef7120e2f598/scroll-down.gif?v=1673894657673" alt="scroll down" height="100">
+          </div>
+        </div>
+      </div>
+		</header>
+
+    <!-- the main section has the body of the story -->
+    <main>
+      <section id="scrolly"> <!-- there is only one of these, so give it an `id` instead of a `class` attribute -->
+
+        <figure> <!-- a `figure` is a useful wrapper around images and captions -->
+          <div class="wrapper">
+  				  <img id="backdrop-img"/>
+          </div>
+          <figcaption></figcaption>
+  			</figure>
+
+  			<article> <!-- a helpful tag to note content that is not related to the background site styling -->
+  				<div class="step" data-step="1">
+  					<p>
+              Most of the time when I teach HTML to a group of students, they make webpages about something they are interested in - 
+              a band, recipe, place or something like that. People always have something to say, and love saying it to the public online.
+            </p>
+  				</div>
+  				<div class="step" data-step="2">
+  					<p>
+              Invariably (in the US at least) <i>someone</i> in the group picks their dog, or dogs in general. People find common ground with
+              learning partners around animals and pets, and it intenet offers a plethora of pictures of dogs, and puppies, to include in a
+              webpage project.
+            </p>
+  				</div>
+  				<div class="step" data-step="3">
+  					<p>
+              No offense of could to cats and kittens, but in my experience peopel more often want to showcase their dogs in my classes
+              than cats. I don't what that says about cat vs. dog owners, but that's been my observation.
+            </p>
+  				</div>
+  			</article>
+  		</section>
+
+    </main>
+
+    <!-- the footer is used to show credits -->
+    <footer>
+      <div class="container">  <!-- tell bootstrap we're going to use a grid -->
+        <div class="row"> <!-- a horizontal set of content -->
+          <div class="col-12"> <!-- content layout full width on all devices -->
+            <p>
+                A sample created by <a href="https://camd.northeastern.edu/faculty/rahul-bhargava/">Rahul Bhargava</a> at the
+                Northeastern University <a href="http://dataculture.northeastern.edu/">Data Culture Group</a>.
+                <br />
+                Source code on <a href="https://github.com/dataculturegroup/our-cup">GitHub</a>.
+                <br />
+                <a href="https://twitter.com/intent/tweet?screen_name=rahulbot" class="twitter-mention-button" data-size="large" data-dnt="true">Tweet to @rahulbot</a>.
+                <br />
+                <a href="https://vis.social/@rahulbot">Toot to @rahulbot@vis.social</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript">
+      // initialize the interaction here, because the body content has been loaded 
+      // and we can access it
+      Project.scrolling.initialize();
+    </script>
+    
+    <script type="text/javascript">
+      // This is a placeholder where you would want to add in any JS code you get 
+      // from an analytics tracker. It is _not_ included in the head tag because you
+      // don't want it to slow down page content loading.
+    </script>
+
+  </body>
+
+</html>

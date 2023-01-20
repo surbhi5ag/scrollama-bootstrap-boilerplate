@@ -24,16 +24,9 @@
 
 /* Basic page style resets, building on the ones boostrap does */
 body {
-  margin: 0px;
-  padding: 0px;
   font-family: var(--font-family-body);
   color: var(--color-text);
-  font-size: 1.25rem;
   background-color: var(--color-bg);
-}
-
-p.small {
-  font-size: 1rem;
 }
 
 h1 {
@@ -57,11 +50,6 @@ h3 {
   font-weight: bold;
 }
 
-em,
-i {
-  color: --color-secondary;
-}
-
 a,
 a:hover {
   color: --color-secondary;
@@ -77,53 +65,36 @@ header p {
   font-size: 1.5rem;
 }
 
-/* main body, scrollytelling part styles */
-#scrolly {
-  position: relative;
+header p.small {
+  font-size: 1rem;
 }
 
+
+/* main body, scrollytelling part styles */
 article {
   position: relative;
   padding: 0;
-  max-width: 50rem;
+  max-width: 50rem; /** on a wide screen don't make text boxes full-width **/
   margin: 0 auto;
 }
 
 figure {
-  position: -webkit-sticky;
-  position: sticky;
+  position: sticky; /** don't move this within the bounds of the #scrolly wrapper **/
   left: 0;
-  width: 100%;
+  width: 100%; /** make image fill the whole screen **/
   height: 100%;
   margin: 0;
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  z-index: 0;
   background-color: #471705;
 }
 
 figure div.wrapper {
+  /** center the image in the box **/
   display: flex;
   justify-content: center;
 }
 
 figure img {
-  height: 100%;
-}
-
-figure p {
-  text-align: center;
-  padding: 1rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -moz-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  font-size: 8rem;
-  font-weight: 900;
-  color: var(--color-bg);
+  height: 100%; /** make the image fill the box **/
 }
 
 figcaption {

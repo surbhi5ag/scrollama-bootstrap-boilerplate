@@ -1,6 +1,8 @@
 // One trick to organizing code is to put related functions inside of an object,
 // so they are under the same "namespace". This helps maek readable code that is
-// easire to maintain in the long term.
+// easier to maintain in the long term.
+// TODO: replace use of `document.getElementByXXX` with `d3.select` so it is more readable
+
 /* globals scrollama */
 
 const Project = {};
@@ -65,7 +67,7 @@ Project.scrolling = {
 
   // called by scrollama when moving out of a step
   handleStepExit: (stepInfo) => {
-    // we don't do anything here
+    // we don't make any transitions when a step scrolls out of view
   },
 
   // called to get content to be the right size to fit the device

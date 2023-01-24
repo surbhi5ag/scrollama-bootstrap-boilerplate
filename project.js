@@ -52,7 +52,7 @@ Project.scrolling = {
   setBackdropImage: (index) => {
     const image = Project.scrolling.figure.getElementsByTagName("img")[0];
     image.src = Project.scrolling.backdrops[index].src;
-    image.classList.add = 'fade-in';
+    //image.classList.add = 'fade-in';
     // TODO: make this caption text a link
     document.getElementsByTagName("figcaption")[0].innerHTML = Project.scrolling.backdrops[index].credit;
   },

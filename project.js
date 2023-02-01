@@ -16,7 +16,8 @@ Project.scrolling = {
   // a list of the backdrop images, ordered so they match the `step` elements on the page
   backdrops: [
     { 'src': 'https://cdn.glitch.global/60a947a3-a0d4-473b-a51a-ef7120e2f598/webcoding.jpeg?v=1673897542123',
-      'credit': 'https://zapier.com/blog/learn-html-css/'
+      'credit': 'https://zapier.com/blog/learn-html-css/',
+      'type': 'image',
     },
     { 'src': 'https://cdn.glitch.global/60a947a3-a0d4-473b-a51a-ef7120e2f598/puppies.jpg?v=1673897599766',
       'credit': 'https://www.wisdompanel.com/en-us/blog/sibling-genetics-in-dogs'
@@ -50,6 +51,14 @@ Project.scrolling = {
 
   // call this to switch the background image
   setBackdropImage: (index) => {
+    // grab the info for thi step
+    // if this step's type is image
+    //.  then swap the image
+    // if this step's type if video
+    //.  hide the image
+    //.  set the video src
+    //.  show the video
+    //.  play the video
     const image = Project.scrolling.figure.getElementsByTagName("img")[0];
     image.src = Project.scrolling.backdrops[index].src;
     //image.classList.add = 'fade-in';
@@ -74,10 +83,11 @@ Project.scrolling = {
   handleResize: () => {
     const stepH = Math.floor(window.innerHeight * 1); // update step heights
     Project.scrolling.steps.forEach(step => step.style.height = stepH + "px")
+    const figureWidth = window.innerWidth;
     const figureHeight = window.innerHeight;
-    const figureMarginTop = 0;
+    Project.scrolling.figure.style.width = figureWidth + "px";
     Project.scrolling.figure.style.height = figureHeight + "px";
-    Project.scrolling.figure.style.top = figureMarginTop + "px";
+    Project.scrolling.figure.style.top = "0px";
     Project.scrolling.figure.getElementsByClassName("wrapper")[0].style.height = figureHeight + "px";
     Project.scrolling.scroller.resize(); // tell scrollama to update new element dimensions
   },

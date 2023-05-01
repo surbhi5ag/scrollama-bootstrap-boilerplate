@@ -15,14 +15,17 @@ Project.scrolling = {
 
   // a list of the backdrop images, ordered so they match the `step` elements on the page
   backdrops: [
-    { 'src': 'https://cdn.glitch.global/60a947a3-a0d4-473b-a51a-ef7120e2f598/webcoding.jpeg?v=1673897542123',
+    { 'src': 'C:/Users/Surbhi Agrawal/Dropbox (MIT)/Digital Equity in India/website/maps/India2.png',
       'credit': 'https://zapier.com/blog/learn-html-css/',
       'type': 'image',
     },
-    { 'src': 'https://cdn.glitch.global/60a947a3-a0d4-473b-a51a-ef7120e2f598/puppies.jpg?v=1673897599766',
+    { 'src': 'C:/Users/Surbhi Agrawal/Dropbox (MIT)/Digital Equity in India/website/maps/India3.png',
       'credit': 'https://www.wisdompanel.com/en-us/blog/sibling-genetics-in-dogs'
     },
-    { 'src': 'https://cdn.glitch.global/60a947a3-a0d4-473b-a51a-ef7120e2f598/kitten-vs-puppy.jpeg?v=1673897648888',
+    { 'src': 'C:/Users/Surbhi Agrawal/Dropbox (MIT)/Digital Equity in India/website/maps/India4.png',
+      'credit': 'https://www.wisdompanel.com/en-us/blog/sibling-genetics-in-dogs'
+    },
+    { 'src': 'C:/Users/Surbhi Agrawal/Dropbox (MIT)/Digital Equity in India/website/maps/India5.png',
       'credit': 'https://www.marketwatch.com/story/owning-a-cat-vs-owning-a-dog-which-pet-makes-better-financial-sense-11649445375',
     },
   ],
